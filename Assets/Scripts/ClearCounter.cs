@@ -1,40 +1,41 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ClearCounter : BaseCounter 
-  {
-   
+public class ClearCounter : BaseCounter
+{
+
    [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
    public override void Interact(Player player)
    {
-      if(!HasKitchenObject())
+      if (!HasKitchenObject())
       {
          // There is no KitchenObject here
-         if(player.HasKitchenObject())
+         if (player.HasKitchenObject())
          {
             // Player is carrying something 
             player.GetKitchenObject().SetkitchenObjectParent(this);
          }
-         else{
+         else
+         {
             // player not carrying anything
          }
       }
-      else{
+      else
+      {
          // There is a KitchenObject
-         if(player.HasKitchenObject())
+         if (player.HasKitchenObject())
          {
             //player is carrying some things
          }
-         else{
+         else
+         {
             // player is not carrying anything
             GetKitchenObject().SetkitchenObjectParent(player);
          }
 
       }
-     
+
    }
 
-   
+
 }

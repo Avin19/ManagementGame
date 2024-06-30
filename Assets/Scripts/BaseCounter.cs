@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseCounter : MonoBehaviour , IkitchenObjectParent
+public class BaseCounter : MonoBehaviour, IkitchenObjectParent
 {
-   
-   [SerializeField] private Transform counterTop;
-    private KitchenObject kitchenObject;
 
-    public virtual void Interact(Player player)
-    {
-        Debug.Log("baseCounter.interact()");
-    }
-    public Transform GetKitchenobjectFollowTransform()
+   [SerializeField] private Transform counterTop;
+   private KitchenObject kitchenObject;
+
+   public virtual void Interact(Player player)
+   {
+      Debug.Log("baseCounter.interact()");
+   }
+   public Transform GetKitchenobjectFollowTransform()
    {
       return counterTop;
    }
