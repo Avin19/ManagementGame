@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
@@ -8,11 +6,13 @@ public class PlayerAnimator : MonoBehaviour
 
     private Animator animator;
 
-    private void Awake() {
+    private void Awake()
+    {
         animator = GetComponent<Animator>();
     }
-    private void Update() {
-        animator.SetBool("IsWallking",player.IsWalking());
-        
+    private void Update()
+    {
+        animator.SetBool("IsWallking", player.IsWalking());
+
     }
 }

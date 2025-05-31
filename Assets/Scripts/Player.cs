@@ -20,6 +20,7 @@ public class Player : MonoBehaviour, IkitchenObjectParent
       public BaseCounter selectCounter;
 
    }
+   //Signleton Behaviour
    private void Awake()
    {
       if (Instance != null)
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour, IkitchenObjectParent
    }
    private void Start()
    {
+      // Subscriber of OnInteractionAction 
       gameInput.OnInteractAction += GameInput_OnInteractAction;
    }
 
@@ -37,6 +39,7 @@ public class Player : MonoBehaviour, IkitchenObjectParent
    {
       if (selectedCounter != null)
       {
+         // Calling the  Interact function and passing player as a reference 
          selectedCounter.Interact(this);
       }
 

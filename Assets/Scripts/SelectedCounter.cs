@@ -11,6 +11,7 @@ public class SelectedCounter : MonoBehaviour
 
   }
 
+  // Show and Hide the selected counter 
   private void Player_OnselectedCounterChnaged(object sender, Player.OnSelectedCounterChangedEventArgs e)
   {
     if (e.selectCounter == baseCounter)
