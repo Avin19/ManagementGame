@@ -23,7 +23,7 @@ public class KitchenObject : MonoBehaviour
         // setting the new object to clear counter
         this.kitchenobjectParent.SetKitchenObject(this);
 
-        // transferring the kitchen objec to the receiver countertop 
+        // transferring the kitchen object to the receiver countertop 
         transform.parent = this.kitchenobjectParent.GetKitchenobjectFollowTransform();
         transform.localPosition = Vector3.zero;
     }
