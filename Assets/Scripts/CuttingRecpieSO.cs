@@ -6,5 +6,6 @@ public class CuttingRecpieSO : ScriptableObject
 {
     public KitchenObjectSO input;
     public KitchenObjectSO output;
-    public int cuttingProgressmax;
+    public int cuttingProgressMax;
+
 }
