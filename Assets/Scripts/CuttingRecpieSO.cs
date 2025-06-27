@@ -1,0 +1,10 @@
+
+using UnityEngine;
+
+[CreateAssetMenu()]
+public class CuttingRecpieSO : ScriptableObject
+{
+    public KitchenObjectSO input;
+    public KitchenObjectSO output;
+    public int cuttingProgressmax;
+}

@@ -13,7 +13,7 @@ public class ClearCounter : BaseCounter
          if (player.HasKitchenObject())
          {
             // Player is carrying something 
-            player.GetKitchenObject().SetkitchenObjectParent(this);
+            player.GetKitchenObject().SetKitchenObjectParent(this);
          }
          else
          {
@@ -30,7 +30,7 @@ public class ClearCounter : BaseCounter
          else
          {
             // player is not carrying anything
-            GetKitchenObject().SetkitchenObjectParent(player);
+            GetKitchenObject().SetKitchenObjectParent(player);
          }
 
       }

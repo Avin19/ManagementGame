@@ -33,6 +33,15 @@ public class Player : MonoBehaviour, IkitchenObjectParent
    {
       // Subscriber of OnInteractionAction 
       gameInput.OnInteractAction += GameInput_OnInteractAction;
+      gameInput.OnInteractAltAction += GameInput_OnInteractAltAction;
+   }
+
+   private void GameInput_OnInteractAltAction(object sender, EventArgs e)
+   {
+      if (selectedCounter != null)
+      {
+         selectedCounter.InteractAlterante(this);
+      }
    }
 
    private void GameInput_OnInteractAction(object sender, EventArgs e)

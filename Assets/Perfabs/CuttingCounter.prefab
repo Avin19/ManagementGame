@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CuttingCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 6845038300278968302, guid: 15905be2cd25e3d45ba4a4a7b867c1b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -105,6 +110,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counterTop: {fileID: 2027453481157548465}
+  cuttingRecpieSOArray:
+  - {fileID: 11400000, guid: 9778e7fb3c41e5a4e97ab9b8b217ba8f, type: 2}
+  - {fileID: 11400000, guid: 2cd104bb66beee84cab4fb9d4899fd6f, type: 2}
+  - {fileID: 11400000, guid: fb60d6abd455ac2499fbae36876f249e, type: 2}
 --- !u!4 &7443652218009320579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2707132192012266204, guid: 15905be2cd25e3d45ba4a4a7b867c1b1,

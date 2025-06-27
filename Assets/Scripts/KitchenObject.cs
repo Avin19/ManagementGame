@@ -8,7 +8,7 @@ public class KitchenObject : MonoBehaviour
     {
         return kitchenObjectSO;
     }
-    public void SetkitchenObjectParent(IkitchenObjectParent kitchenobjectParent)
+    public void SetKitchenObjectParent(IkitchenObjectParent kitchenobjectParent)
     {       // clearing the kitchen object from the counter to setup a new kitchen object
         if (this.kitchenobjectParent != null)
         {
@@ -30,5 +30,23 @@ public class KitchenObject : MonoBehaviour
     public IkitchenObjectParent GetkitchenObjectParent()
     {
         return kitchenobjectParent;
+    }
+
+    public void Destoryself()
+    {
+        // Clear the kitchen object from the counter top 
+        kitchenobjectParent.ClearKitchenObject();
+
+        Destroy(gameObject);
+    }
+
+
+    public static KitchenObject SpawnKitchenobject(KitchenObjectSO kitchenObjectSO, IkitchenObjectParent kitchenObjectParent)
+    {
+        Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.perfabs);
+        KitchenObject kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
+        kitchenObject.SetKitchenObjectParent(kitchenObjectParent);
+
+        return kitchenObject;
     }
 }
