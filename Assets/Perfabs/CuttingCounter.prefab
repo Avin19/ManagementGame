@@ -179,8 +179,9 @@ GameObject:
   - component: {fileID: 1310520070933830833}
   - component: {fileID: 6316128622186870874}
   - component: {fileID: 3355318283389669408}
+  - component: {fileID: 991494914482559632}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ProgressBarUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,6 +285,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cuttingCounter: {fileID: 2051714653007282194}
   barImage: {fileID: 2672401877001591210}
+--- !u!114 &991494914482559632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7553483187330421887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04de940797efef9449adb7943a6a0294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4817866592229791327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -474,8 +487,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: d72bee846803d074784ffb8f64e993ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1627276734381203244}
   m_SourcePrefab: {fileID: 100100000, guid: d72bee846803d074784ffb8f64e993ca, type: 3}
+--- !u!1 &5949658505312441850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4589716710238282922, guid: d72bee846803d074784ffb8f64e993ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 7863458554205368656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1627276734381203244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949658505312441850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0885f8e1b1a164295f82b102e05143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuttingCounter: {fileID: 2051714653007282194}
 --- !u!4 &5949658505312441851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: d72bee846803d074784ffb8f64e993ca,

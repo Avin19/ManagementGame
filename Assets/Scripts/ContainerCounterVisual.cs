@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ContainerCountervisuaal : MonoBehaviour
+public class ContainerCounterVisual : MonoBehaviour
 {
     private Animator animator;
     private const string OPEN_CLOSE = "OpenClose";

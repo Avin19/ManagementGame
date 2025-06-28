@@ -10,6 +10,7 @@ public class CuttingCounter : BaseCounter
     {
         public float progressNormalized;
     }
+    public event EventHandler OnCut;
 
 
 
@@ -65,6 +66,7 @@ public class CuttingCounter : BaseCounter
         {
             // There is a kitchen object ready to cut and it can be cut
             cuttingProgress++;
+            OnCut?.Invoke(this, EventArgs.Empty);
             CuttingRecpieSO cuttingRecpieSO = cuttingRecpieSOWithInput(GetKitchenObject().GetKitchenObjectSO());
             OnProgressChanged?.Invoke(this, new OnProgressChangeEventArgs
             {
