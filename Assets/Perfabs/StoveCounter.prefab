@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2296381823823886972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.055, y: 1.44, z: 0.009}
+  m_LocalPosition: {x: 0.055, y: 1.461, z: 0.009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2707132192012266204}
   - component: {fileID: 2707132192012266205}
-  - component: {fileID: 8247948792013995217}
   - component: {fileID: 3462463763820441445}
   m_Layer: 6
   m_Name: StoveCounter
@@ -89,19 +88,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0.48, z: 0}
---- !u!114 &8247948792013995217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2707132192012266206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fd953db82130f4daf8d124be3d3303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counterTop: {fileID: 6845038300278968302}
 --- !u!114 &3462463763820441445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d7c937f6f95b647ac9cd1542166417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counterTop: {fileID: 6845038300278968302}
+  fryingRecpieSOArray:
+  - {fileID: 11400000, guid: 92d35ea4d89f20947b2ac2222a2b08d7, type: 2}
 --- !u!1001 &1521528137569550242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -339,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d20d8e8f03958f409b46f5d56295279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 8247948792013995217}
+  baseCounter: {fileID: 0}
   visualGameObjectArraay:
   - {fileID: 8648772616023406935}
   - {fileID: 110328841927346857}

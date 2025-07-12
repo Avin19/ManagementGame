@@ -32,7 +32,7 @@ public class CuttingCounter : BaseCounter
                     player.GetKitchenObject().SetKitchenObjectParent(this);
                     cuttingProgress = 0;
                     // player carrying something that can be cutting 
-                    CuttingRecpieSO cuttingRecpieSO = cuttingRecpieSOWithInput(GetKitchenObject().GetKitchenObjectSO());
+                    CuttingRecpieSO cuttingRecpieSO = GetCuttingRecpieSOWithInput(GetKitchenObject().GetKitchenObjectSO());
 
                     OnProgressChanged?.Invoke(this, new OnProgressChangeEventArgs
                     {
@@ -67,7 +67,7 @@ public class CuttingCounter : BaseCounter
             // There is a kitchen object ready to cut and it can be cut
             cuttingProgress++;
             OnCut?.Invoke(this, EventArgs.Empty);
-            CuttingRecpieSO cuttingRecpieSO = cuttingRecpieSOWithInput(GetKitchenObject().GetKitchenObjectSO());
+            CuttingRecpieSO cuttingRecpieSO = GetCuttingRecpieSOWithInput(GetKitchenObject().GetKitchenObjectSO());
             OnProgressChanged?.Invoke(this, new OnProgressChangeEventArgs
             {
 
@@ -89,16 +89,16 @@ public class CuttingCounter : BaseCounter
     }
     private bool HasRecipeWithInput(KitchenObjectSO kitchenObjectSO)
     {
-        CuttingRecpieSO cuttingRecpieSO = cuttingRecpieSOWithInput(kitchenObjectSO);
+        CuttingRecpieSO cuttingRecpieSO = GetCuttingRecpieSOWithInput(kitchenObjectSO);
         return cuttingRecpieSO != null;
     }
 
     private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenobjectSO)
     {
-        CuttingRecpieSO cuttingRecpieSO = cuttingRecpieSOWithInput(inputKitchenobjectSO);
+        CuttingRecpieSO cuttingRecpieSO = GetCuttingRecpieSOWithInput(inputKitchenobjectSO);
         return cuttingRecpieSO.output != null ? cuttingRecpieSO.output : null;
     }
-    private CuttingRecpieSO cuttingRecpieSOWithInput(KitchenObjectSO inputKitchenObjectSO)
+    private CuttingRecpieSO GetCuttingRecpieSOWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
         foreach (CuttingRecpieSO cuttingRecpieSO in cuttingRecpieSOArray)
         {
